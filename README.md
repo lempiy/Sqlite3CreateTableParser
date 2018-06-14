@@ -40,7 +40,7 @@ CREATE TABLE contact_groups (
 `
 
 func main() {
-    table, errCode := scl.ParseTable(sql, 0)
+    table, errCode := parser.ParseTable(sql, 0)
     if errCode != parser.ERROR_NONE {
         panic("Error during parsing sql")
     }
