@@ -453,7 +453,7 @@ func lexerEscape(state *State) tokenT {
 		c = next(state)
 	}
 
-	ptr := string(state.buffer[offset:state.offset])
+	ptr := string(state.buffer[offset : state.offset-1])
 
 	if c != escaped {
 		return tokERROR
